@@ -9,7 +9,7 @@ const ProductDetails = lazy(() =>
 );
 const OurStory = lazy(() => import("../pages/Our-Story/OurStory"));
 const Login = lazy(() => import("../pages/LoginPage/Login"));
-const SignUp = lazy(() => import("../pages/SignUp/SignUp"));
+const SignUp = lazy(() => import("../pages/SignUpPage/SignUp"));
 
 const MainRoutes = () => {
   return (
@@ -68,7 +68,7 @@ const MainRoutes = () => {
           path="/signUp"
           element={
             <Suspense fallback={<div>Loading...</div>}>
-              <SignUp />
+             <SignUp/>
             </Suspense>
           }
         />
