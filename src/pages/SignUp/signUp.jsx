@@ -91,4 +91,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;SignUp
+export default SignUp;

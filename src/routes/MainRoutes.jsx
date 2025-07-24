@@ -8,8 +8,8 @@ const ProductDetails = lazy(() =>
   import("../pages/Product-Detail/ProductDetails")
 );
 const OurStory = lazy(() => import("../pages/Our-Story/OurStory"));
-const Login = lazy(() => import("../pages/Login/login"));
-const SignUp = lazy(() => import("../pages/SignUP/signUp"));
+const Login = lazy(() => import("../pages/Login/Login"));
+const SignUp = lazy(() => import("../pages/SignUp/SignUp"));
 
 const MainRoutes = () => {
   return (
