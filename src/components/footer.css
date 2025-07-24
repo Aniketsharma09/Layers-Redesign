@@ -1,0 +1,120 @@
+.footer{
+    margin-top: 1rem;
+    height: 30vh;
+    width: 100vw;
+    /* background-color: lightgreen; */
+}
+
+.footer-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    height: 80%;
+    width: 100%;
+    /* background-color: bisque; */
+}
+.footer-top-left{
+    width: 50%;
+    height: 100%;
+    /* background-color: lightgreen; */
+}
+.top-left-top{
+    padding: 1rem;
+    height: 70%;
+    width: 100%;
+    /* background-color: aqua; */
+}
+.top-left-top img{
+    width: 40%;
+}
+.top-left-bottom{
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30%;
+    width: 100%;
+    /* background-color: antiquewhite; */
+}
+
+.footer-top-right{
+    display: flex;
+    flex-direction: column;
+   padding: 1rem 2rem;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    /* background-color: lightcoral; */
+}
+.footer-top-right h3{
+    border-radius: .5rem;
+    color: white;
+    padding: .5rem 2rem .5rem 1rem;
+    background-color: #0C45AB;
+    font-size: .8rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.footer-top-right h2{
+    font-size: 1rem;
+    margin-top: .8rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.inputDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.inputDiv input{
+    background-color: rgb(216, 216, 216);
+    width: 75%;
+    outline: none;
+    padding: .5rem 1rem;
+    margin-top: .5rem;
+    border: none ;
+    border-radius: .5rem;
+    font-size: .9rem;
+    text-transform: capitalize;
+}
+.inputDiv button{
+    margin-top: .5rem;
+    border: none;
+    border-radius: .3rem;
+    background-color: #0C45AB;
+    color: white;
+    width: 23%;;
+    padding: .5rem;
+    font-size: .9rem;
+    text-transform: capitalize ;
+}
+.inputDiv button:hover{
+    transform: scale(.98);
+}
+.inputDiv button:active{
+    transform: scale(.95);
+}
+.footer-bottom{
+    padding: 1rem 2rem;
+    height: 20%;
+    width: 100%;
+    background-color: #0C45AB;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    color: white;
+}
+.footer-bottom p, .top-left-bottom h5{
+    font-size: .8rem;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.footer-bottom .left{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}
