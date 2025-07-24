@@ -7,9 +7,9 @@ const Products = lazy(() => import("../pages/Products/Products"));
 const ProductDetails = lazy(() =>
   import("../pages/Product-Detail/ProductDetails")
 );
-const OurStory = lazy(() => import("../pages/Our-Story/OurStory.jsx"));
-const Login = lazy(() => import("../pages/Login/Login.jsx"));
-const SignUp = lazy(() => import("../pages/SignUp/SignUp.jsx"));
+const OurStory = lazy(() => import("../pages/Our-Story/OurStory"));
+const Login = lazy(() => import("../pages/LoginPage/Login"));
+const SignUp = lazy(() => import("../pages/SignUp/SignUp"));
 
 const MainRoutes = () => {
   return (

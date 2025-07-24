@@ -1,8 +1,8 @@
-import { useLayoutEffect, useRef } from 'react';
-import '../Login/login.css';
-import logo from '../../assets/logo.svg';
-import gsap from 'gsap';
-import { useNavigate } from 'react-router-dom';
+import { useLayoutEffect, useRef } from "react";
+import "../LoginPage/login.css";
+import logo from "../../assets/logo.svg";
+import gsap from "gsap";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const containerRef = useRef(null);
@@ -63,7 +63,6 @@ const SignUp = () => {
         delay: 1.6,
         ease: "power3.out",
       });
-
     }, containerRef);
 
     return () => ctx.revert(); // Cleanup animations on unmount
@@ -81,9 +80,12 @@ const SignUp = () => {
           <input placeholder="E-mail" />
           <input placeholder="password" type="password" />
           <input placeholder="repeat password" type="password" />
-          <button className="btn" type="button">signup</button>
+          <button className="btn" type="button">
+            signup
+          </button>
           <h2>
-            already have an account <span onClick={() => navigate('/login')}>click here</span>
+            already have an account{" "}
+            <span onClick={() => navigate("/login")}>click here</span>
           </h2>
         </form>
       </div>
