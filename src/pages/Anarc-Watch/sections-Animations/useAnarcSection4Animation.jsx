@@ -34,7 +34,7 @@ const useAnarcSection4Animation = (sectionRef) => {
           ease: "power3.out",
           scrollTrigger: {
             trigger: ".a-sec4-part1",
-            start: "top 80%",
+            start: "top 70%",
             toggleActions: "play none none reverse",
           },
         });

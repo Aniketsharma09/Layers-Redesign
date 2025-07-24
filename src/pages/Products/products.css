@@ -1,87 +1,159 @@
-.product-main{
-    width: 100vw;
+.product-main {
+  width: 100%; 
+  height: fit-content;
+  overflow-x: hidden;
+}
+
+.first-pro {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  padding-top: 4rem;
+}
+
+.first-pro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100% 20%;
+}
+
+.image-cover {
+  position: absolute;
+  height: 50vh;
+  width: 50vw;
+  max-width: 400px;
+  top: 5%;
+  left: 5%;
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+
+.first-pro h1 {
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  background-color: #0c45ab;
+  color: white;
+  position: absolute;
+  top: 25%;
+  left: 3%;
+  font-size: 3rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.product-container {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.productCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: aliceblue;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 31%;
+  min-width: 280px;
+  max-width: 350px;
+}
+
+.productCart img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+}
+
+.product-name-price {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-name-price h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #0c45ab;
+}
+
+.product-name-price h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.product-name-price h3 span {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.815);
+  text-decoration: line-through;
+  font-size: 0.9rem;
+  margin-right: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .first-pro {
+    height: 60vh;
+  }
+
+  .image-cover {
+    width: fit-content;
     height: fit-content;
-}
-.first-pro{
-    cursor: pointer;
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    padding: 0;
-    padding-top: 4rem;
-}
-.first-pro img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 100% 20%;
-}
-.image-cover{
-    position: absolute;
-    height: 50vh;
-    width: 65vh;
-    top: 5%;
-    left: 5%;
-    background-color: #FFFFFF;
-}
-.first-pro h1{
-    z-index: 1;
-    padding: .5rem 1rem;
-    background-color: #0C45AB;
-    color: white;
-    position: absolute;
-    top: 25%;
+  }
+
+  .first-pro h1 {
+    font-size: 2rem;
+    top: 83%;
     left: 3%;
-    font-size: 3rem;
-    text-transform: capitalize;
-    letter-spacing: 1px;
+  }
+
+  .productCart {
+    width: 45%;
+  }
+
+  .productCart img {
+    height: 22vh;
+  }
+
+  .product-name-price h2,
+  .product-name-price h3 {
+    font-size: 1rem;
+  }
 }
-.product-container{
-    padding: 3rem;
-    width: 100%;
+
+@media (max-width: 480px) {
+  .first-pro {
+    height: 50vh;
+  }
+
+  .image-cover {
+    width: fit-content;
     height: fit-content;
-    /* background-color: lightgreen; */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-.productCart{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    background-color: aliceblue;
+  }
+
+  .first-pro h1 {
+    font-size: 2rem;
+    top: 83%;
+    left: 3%;
+  }
+  .product-container{
     padding: 1rem;
-    flex-shrink: 0;
-    border-radius: 1rem;
-    width: 31%;
-    height: fit-content;
-}
-.productCart img{
-    border-radius: 1rem;
+  }
+  .productCart {
     width: 100%;
-    height: 30vh;
-    object-fit: cover;
-}
-.product-name-price{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.product-name-price h2{
+  }
+  .productCart img {
+    height: 25vh;
+  }
+  .product-name-price h2,
+  .product-name-price h3 {
     font-size: 1.1rem;
-    font-weight: 500;
-    color: #0C45AB;
-}
-.product-name-price h3{
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-.product-name-price h3 span{
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.815);
-    text-decoration: line-through;
-    font-size: .9rem;
-    margin-right: .2rem;
+  }
 }

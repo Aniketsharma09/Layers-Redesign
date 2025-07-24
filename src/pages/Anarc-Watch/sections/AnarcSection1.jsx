@@ -17,7 +17,10 @@ useAnarcSection1Animation(sectionRef)
             <div className='logo-third'></div>
             <h3 className='bottom-text'>powerfull. accurate. unique</h3>
         </div>
-        <img src='https://www.layers.shop/cdn/shop/files/336_1_5.webp?v=1731325519'/>
+        <div className="first-pro-right">
+          <img src='https://www.layers.shop/cdn/shop/files/336_1_5.webp?v=1731325519'/>
+        </div>
+        
       </div>
   );
 };

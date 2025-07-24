@@ -13,7 +13,7 @@ const Login = () => {
       // Logo image
       gsap.from(".logo-cont img", {
         y: -50,
-        opacity: 0, 
+        opacity: 0,
         duration: 0.8,
         ease: "power3.out",
       });

@@ -8,7 +8,7 @@ const Section1 = () => {
   useSection1Animation(containerRef);
 
   return (
-    <div className="section1" ref={containerRef}>
+    <div className="ourStory-section1" ref={containerRef}>
       <div className="info-div">
         <h3>content creator & entrepreneur</h3>
         <h1>

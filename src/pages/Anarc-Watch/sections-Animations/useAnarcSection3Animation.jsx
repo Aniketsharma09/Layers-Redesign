@@ -15,7 +15,7 @@ const useAnarcSection3Animation = (sectionRef) => {
           duration: 1,
           scrollTrigger: {
             trigger: ".a-sec-part1",
-            start: "top 80%",
+            start: "top 70%",
             toggleActions: "play none none reverse",
           },
         });
@@ -26,7 +26,7 @@ const useAnarcSection3Animation = (sectionRef) => {
           duration: 1,
           scrollTrigger: {
             trigger: ".a-sec-part1",
-            start: "top 80%",
+            start: "top 70%",
             toggleActions: "play none none reverse",
           },
         });
@@ -39,7 +39,7 @@ const useAnarcSection3Animation = (sectionRef) => {
           stagger: 0.2,
           scrollTrigger: {
             trigger: ".a-sec-part2",
-            start: "top 90%",
+            start: "top 80%",
           },
         });
 
@@ -50,7 +50,7 @@ const useAnarcSection3Animation = (sectionRef) => {
           stagger: 0.3,
           scrollTrigger: {
             trigger: ".a-sec-part2",
-            start: "top 80%",
+            start: "top 70%",
             toggleActions: "play none none reverse",
           },
         });
@@ -65,7 +65,7 @@ const useAnarcSection3Animation = (sectionRef) => {
             stagger: 0.2,
             scrollTrigger: {
               trigger: ".a-sec-part3",
-              start: "top 80%",
+              start: "top 70%",
               toggleActions: "play none none reverse",
             },
           }
@@ -78,7 +78,7 @@ const useAnarcSection3Animation = (sectionRef) => {
           duration: 1,
           scrollTrigger: {
             trigger: ".a-sec-part3",
-            start: "top 80%",
+            start: "top 70%",
             toggleActions: "play none none reverse",
           },
         });

@@ -3,12 +3,10 @@ import Nav from './components/Nav'
 import MainRoutes from './routes/MainRoutes'
 const App = () => {
   return (
-    <div>
-   
+    <div className='container'>
       <Nav/>
       <MainRoutes/>
       <Footer/>
-    
     </div>
   )
 }

@@ -11,7 +11,7 @@ const useSection4Animation = (section4Ref) => {
       gsap.timeline({
         scrollTrigger: {
           trigger: ".section4-first-part",
-          start: "top 85%",
+          start: "top 75%",
           end: "bottom 20%", // Ensures the animation is active for longer
           toggleActions: "play none none reverse", // Replay on scroll up
         },
