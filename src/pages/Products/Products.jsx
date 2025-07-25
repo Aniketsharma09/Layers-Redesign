@@ -3,6 +3,7 @@ import './products.css';
 import { ProductContext } from '../../context/ProductContext';
 import { Link, useNavigate } from 'react-router-dom';
 import useProductsAnimation from './useProductsAnimation';
+import anarcWatch from '../../assets/images/AnarcWatch.jpg'
 
 const Products = () => {
   const { products } = useContext(ProductContext);
@@ -33,9 +34,8 @@ const Products = () => {
     <div className="product-main">
       <div className="first-pro" onClick={() => navigate('/anarc-watch')}>
         <h1 ref={titleRef}>Anarc Smartwatch</h1>
-        <div className="image-cover"></div>
         <img
-          src="https://www.layers.shop/cdn/shop/files/Frame_1984077863.webp?v=1731475175&width=1500"
+          src={anarcWatch}
           alt="Main"
         />
       </div>

@@ -19,17 +19,6 @@
   object-position: 100% 20%;
 }
 
-.image-cover {
-  position: absolute;
-  height: 50vh;
-  width: 50vw;
-  max-width: 400px;
-  top: 5%;
-  left: 5%;
-  background-color: #ffffff;
-  border-radius: 1rem;
-}
-
 .first-pro h1 {
   z-index: 1;
   padding: 0.5rem 1rem;
@@ -101,11 +90,6 @@
 @media (max-width: 768px) {
   .first-pro {
     height: 60vh;
-  }
-
-  .image-cover {
-    width: fit-content;
-    height: fit-content;
   }
 
   .first-pro h1 {

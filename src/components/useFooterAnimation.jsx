@@ -9,80 +9,88 @@ gsap.registerPlugin(ScrollTrigger);
 const useFooterAnimation = (footerRef) => {
   const location = useLocation();
 
-  useGSAP(() => {
-    if (!footerRef.current) return;
+  useGSAP(
+    () => {
+      if (!footerRef?.current) return;
 
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: "top 75%",         // good balance for both desktop & mobile
-          toggleActions: "play none none none",
-          once: true,
-        },
+      // Kill only previous footer-related triggers
+      ScrollTrigger.getAll().forEach((trigger) => {
+        if (trigger.vars.id === "footerTrigger") trigger.kill();
       });
 
-      tl.from(".footer-top-left .top-left-top img", {
-        opacity: 0,
-        y: -40,
-        duration: 0.4,
-      })
-        .from(
-          ".footer-top-left .top-left-bottom h5",
-          {
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            id: "footerTrigger", // uniquely identify this trigger
+            trigger: footerRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reset",
+          },
+        });
+
+        tl.from(".footer-top-left .top-left-top img", {
+          opacity: 0,
+          y: -40,
+          duration: 0.4,
+        })
+          .from(
+            ".footer-top-left .top-left-bottom h5",
+            {
+              opacity: 0,
+              y: -20,
+              stagger: 0.1,
+              duration: 0.3,
+            },
+            "-=0.2"
+          )
+          .from(
+            ".footer-top-right h3",
+            {
+              opacity: 0,
+              y: -30,
+              duration: 0.3,
+            },
+            "-=0.1"
+          )
+          .from(".footer-top-right h2", {
             opacity: 0,
             y: -20,
-            stagger: 0.1,
             duration: 0.3,
-          },
-          "-=0.2"
-        )
-        .from(
-          ".footer-top-right h3",
-          {
+          })
+          .from(".footer-top-right .inputDiv", {
             opacity: 0,
-            y: -30,
+            y: -20,
             duration: 0.3,
-          },
-          "-=0.1"
-        )
-        .from(".footer-top-right h2", {
-          opacity: 0,
-          y: -20,
-          duration: 0.3,
-        })
-        .from(".footer-top-right .inputDiv", {
-          opacity: 0,
-          y: -20,
-          duration: 0.3,
-        })
-        .from(
-          ".footer-bottom .left p",
-          {
+          })
+          .from(
+            ".footer-bottom .left p",
+            {
+              opacity: 0,
+              y: -15,
+              stagger: 0.1,
+              duration: 0.3,
+            },
+            "-=0.2"
+          )
+          .from(".footer-bottom .right p", {
             opacity: 0,
-            y: -15,
-            stagger: 0.1,
+            y: -10,
             duration: 0.3,
-          },
-          "-=0.2"
-        )
-        .from(".footer-bottom .right p", {
-          opacity: 0,
-          y: -10,
-          duration: 0.3,
-        });
-    }, footerRef);
+          });
+      }, footerRef);
 
-    ScrollTrigger.refresh(); // critical for responsive support
+      ScrollTrigger.refresh();
 
-    return () => ctx.revert(); // cleanup
-  }, { dependencies: [location.pathname] });
+      return () => ctx.revert();
+    },
+    { dependencies: [location.pathname] }
+  );
 
-  // Fallback refresh in case routing breaks scroll trigger
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       ScrollTrigger.refresh();
     }, 300);
+    return () => clearTimeout(timer);
   }, [location.pathname]);
 };
 

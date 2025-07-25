@@ -250,6 +250,9 @@
   border-radius: 1rem;
   object-position: top;
 }
+.jorney-cart:nth-last-child(4) .jorCart-bottom img{
+  object-position: center;
+}
 
 /* Color overrides for icons */
 .jorney-cart:nth-last-child(1) .jorCart-top i { background-color: #F6A100; }

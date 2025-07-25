@@ -1,28 +1,16 @@
-import { lazy, Suspense } from "react";
-import "./home.css"; 
-const Section1 = lazy(() => import("./sections/Section1"));
-const Section2 = lazy(() => import("./sections/Section2"));
-const Section3 = lazy(() => import("./sections/Section3"));
-const Section4 = lazy(() => import("./sections/Section4"));
+import "./home.css";
+import Section1 from "./sections/Section1";
+import Section2 from "./sections/Section2";
+import Section3 from "./sections/Section3";
+import Section4 from "./sections/Section4";
 
 const Home = () => {
   return (
     <div className="home">
-      <Suspense fallback={<div className="loader">Loading Section 1...</div>}>
-        <Section1 />
-      </Suspense>
-
-      <Suspense fallback={<div className="loader">Loading Section 2...</div>}>
-        <Section2 />
-      </Suspense>
-
-      <Suspense fallback={<div className="loader">Loading Section 3...</div>}>
-        <Section3 />
-      </Suspense>
-
-      <Suspense fallback={<div className="loader">Loading Section 4...</div>}>
-        <Section4 />
-      </Suspense>
+      <Section1 />
+      <Section2 />
+      <Section3 />
+      <Section4 />
     </div>
   );
 };
