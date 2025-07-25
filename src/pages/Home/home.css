@@ -291,6 +291,9 @@
 .input button:hover {
   transform: scale(1.01);
 }
+.input button:active {
+  transform: scale(.9) !important;
+}
 .bottom-part {
   padding: 1rem;
   display: flex;

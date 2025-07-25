@@ -58,6 +58,12 @@
   margin-left: 1.5rem;
 }
 
+.loginBtn:hover{
+  transform: scale(1.05) !important;
+}
+.loginBtn:active{
+  transform: scale(1) !important;
+}
 .mobile-menu-icon {
   display: none;
   font-size: 1.8rem;
@@ -65,7 +71,6 @@
   cursor: pointer;
 }
 
-/* === Mobile Sidebar === */
 .mobile-nav {
   position: fixed;
   top: 0;
