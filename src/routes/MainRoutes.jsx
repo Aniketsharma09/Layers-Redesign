@@ -14,20 +14,18 @@ const SignUp = lazy(() => import("../pages/SignUpPage/SignUp"));
 
 const MainRoutes = () => {
   return (
-    <>
-      <ScrollToTop />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/anarc-watch" element={<AnarcWatch />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/product-detail/:id" element={<ProductDetails />} />
-          <Route path="/our-story" element={<OurStory />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-        </Routes>
-      </Suspense>
-    </>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/anarc-watch" element={<AnarcWatch />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/product-detail/:id" element={<ProductDetails />} />
+        <Route path="/our-story" element={<OurStory />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
+      <ScrollToTop /> 
+    </Suspense>
   );
 };
 
